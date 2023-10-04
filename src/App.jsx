@@ -8,7 +8,6 @@ import LivePage from './components/LivePage/LivePage'
 import { BlogPage } from './components/BlogPages/BlogPage'
 import ProfileCard from './components/ProfileCard/ProfileCard'
 import LiveSessions from './components/LivePage/LiveSessions'
-import Translation from './components/Translator/Translator'
 
 
 const App = () => {
@@ -23,7 +22,6 @@ const App = () => {
         <Route path='/admin' element={<BlogPage/>}/>
         <Route path='/profile' element={<ProfileCard/>}/>
         <Route path='/go-live' element={<LivePage/>}/>
-        <Route path='/translate' element={<Translation/>}/>
        </Routes>
     </div>
   )

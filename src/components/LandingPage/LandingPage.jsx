@@ -10,23 +10,12 @@ import { Link } from 'react-router-dom'
 import logo from '../images/logo-virtual.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook, faGear, faHospital, faHouse, faQuoteLeft, faQuoteRight, faUserFriends } from '@fortawesome/free-solid-svg-icons'
-import Translation from '../Translator/Translator'
 
 
 export const LandingPage = () => {
-  const targetElementRef = useRef(null);
 
-  const readText = () => {
-    if (targetElementRef.current) {
-      const text = targetElementRef.current.textContent;
-    }
-  };
-
-  
-
-  console.log(readText());
   return (
-    <div className='landing-page' ref={targetElementRef}>
+    <div className='landing-page'>
       <header className='app-header'>
         <img src={logo} alt='VirtualCare'></img>
         <div className='header-components'>
