@@ -1,0 +1,62 @@
+.livesessions-header {
+    display: flex;
+    gap:30px;
+    margin-left: 30em;
+}
+
+.livesessions-header h3 {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+.live-sessions-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .session-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .session-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    text-align: left;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+  
+  h2 {
+    font-size: 20px;
+  }
+  
+  p {
+    margin: 10px 0;
+  }
+  
+  button {
+    background-color: #006983;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #004e61;
+  }
+
+  .liveheader-component.active {
+    color: #EC417A;
+  }
