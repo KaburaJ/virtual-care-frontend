@@ -143,4 +143,32 @@
 }
 
 
+@media screen and (max-width: 900px) {
+    .account-form {
+        width: 38em;
+        margin-left: 1em;
+    }
+    .username .username-field .input-field {
+        width: 20em;
+    }
+
+    .address-field .input-field{
+        max-width: 42.5em;
+    }
+
+    .contact-info-field .input-field {
+        max-width: 12.2em;
+    }
+    .text-input-field {
+        width: 35em;
+    }
+
+    .account {
+        margin-top: -6em;
+    }
+
+    .account h1 {
+        margin-left: .7em;
+    }
+}
 

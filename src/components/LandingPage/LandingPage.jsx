@@ -161,7 +161,7 @@ export const LandingPage = () => {
             <p><span class="location-icon">&#x1F4CD;</span> 123 Rongai, Kajiado, Kenya</p>
             <p><span class="location-icon">&#x260E;</span> (254) 456-7890-199</p>
             <p><span class="location-icon">&#x2709;</span> info@vitualcare.com</p>
-            <p style={{ marginLeft: "-2em" }}>&copy; 2023 Virtual Care. All rights reserved.</p>
+            <p className="copy-tag">&copy; 2023 Virtual Care. All rights reserved.</p>
           </div>
         </div>
       </footer>

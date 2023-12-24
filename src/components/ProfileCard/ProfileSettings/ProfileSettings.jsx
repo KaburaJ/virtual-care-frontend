@@ -7,8 +7,8 @@ import { faPen } from '@fortawesome/free-solid-svg-icons'
 export const ProfileSettings = () => {
 
     return (
-        <div style={{marginTop:"1em"}}>
-            <h1 style={{fontWeight:"normal", marginLeft:"1.6em"}}>Profile Settings</h1>
+        <div className="overall-settings-container" style={{marginTop:"1em"}}>
+            <h1 className="settings-header" style={{fontWeight:"normal", marginLeft:"1.6em"}}>Profile Settings</h1>
                 
                 <form className='settings-form'>
                 <div>
@@ -34,7 +34,7 @@ export const ProfileSettings = () => {
                     </div>
                     <div className='profile-buttons'>
                         <button type='submit'>Save Changes</button>
-                        <button type='submit'>Cancel</button>
+                        <button type='submit' className='cancel-button'>Cancel</button>
                     </div>
                 </form>
 

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './RegistrationPage.css';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleLeft, faTableCellsLarge } from '@fortawesome/free-solid-svg-icons';
 import logo from '../images/logo-virtual.png'
-
+import axios from 'axios'
 
 const RegistrationPage = () => {
     const [currentPage, setCurrentPage] = useState(0);
@@ -22,6 +22,28 @@ const RegistrationPage = () => {
         capacity: '',
     });
     const navigate = useNavigate()
+
+
+    const registrationParams = {
+        FirstName: formInputs.firstname,
+        LastName: formInputs.lastname,
+        UserName: formInputs.username,
+        UserEmail: formInputs.email,
+        UserPassword: formInputs.password,
+        UserCPassword: formInputs.cpassword,
+        UserPhoneNumber: formInputs.phone
+    }
+
+
+    console.log(typeof(registrationParams.UserPhoneNumber));
+    const handleRegistration = () => {
+        axios.post('http://localhost:5002/user/signin', registrationParams)
+        .then((res) => {
+            console.log(res);
+        }).catch(e => console.log(e))
+
+        navigate('/log-in')
+    }
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -55,7 +77,7 @@ const RegistrationPage = () => {
 
     const handleLandingClick = () => {
         navigate('/')
-      }
+    }
 
     const renderPage = () => {
         switch (currentPage) {
@@ -73,8 +95,8 @@ const RegistrationPage = () => {
                     <div className="step-container">
                         <h2>What is your name?</h2>
                         <div className='name-input'>
-                        <input className="name" type="text" name="firstname" placeholder="First Name" value={formInputs.firstname} onChange={handleInputChange} />
-                        <input className='name' type="text" name="lastname" placeholder="Last Name" value={formInputs.lastname} onChange={handleInputChange} />
+                            <input className="name" type="text" name="firstname" placeholder="First Name" value={formInputs.firstname} onChange={handleInputChange} />
+                            <input className='name' type="text" name="lastname" placeholder="Last Name" value={formInputs.lastname} onChange={handleInputChange} />
                         </div>
                         <button className="next-button" onClick={handleNextPage}>Next</button>
                         <p className="register-instead" onClick={handleLoginPage}>
@@ -122,70 +144,9 @@ const RegistrationPage = () => {
                     <div className="step-container">
                         <h2>Enter your phone number</h2>
                         <input type="text" name="phone" placeholder="254-7123-456-78" value={formInputs.phone} onChange={handleInputChange} />
-                        <button className="next-button" onClick={handleNextPage}>Next</button>
+                        <button className="next-button" onClick={handleRegistration}>Register</button>
                     </div>
                 );
-            case 6:
-                return (
-                    <div className="step-container">
-                        <h2>In what category are you?</h2>
-                        <select
-                            className="category"
-                            name="category"
-                            value={formInputs.category}
-                            onChange={handleInputChange}
-                            style={{width:"12em", height:"3.35em"}}
-                        >
-                            <option value="">Select Category</option>
-                            <option value="Medical Practitioner">Medical Practitioner</option>
-                            <option value="User">Normal User</option>
-                        </select>
-                        <button className="next-button" onClick={handleNextPage}>
-                            Next
-                        </button>
-                    </div>
-                );
-            case 7:
-                if (formInputs.category === 'Medical Practitioner') {
-                    return (
-                        <div className="step-container">
-                            <h2>Step 7: Medical Practitioner Details</h2>
-                            <div style={{display:"flex",flexDirection:"row", gap:".5em"}}>
-                            <select
-                                className="capacity"
-                                name="capacity"
-                                value={formInputs.capacity}
-                                onChange={handleInputChange}
-                                style={{width:"12em", height:"3.35em"}}
-                            >
-                                <option value="">Select Capacity</option>
-                                <option value="Doctor">Doctor</option>
-                                <option value="Nurse">Nurse</option>
-                                <option value="Gynaecologist">Gynaecologist</option>
-                                <option value="Pysiotherapist">Pysiotherapist</option>
-                                <option value="Other">Other</option>
-                            </select>
-                            <input
-                                type="text"
-                                name="institution"
-                                value={formInputs.institution}
-                                onChange={handleInputChange}
-                                placeholder="Institution Affiliation"
-                            />
-                            </div>
-                            <button className="next-button"  onClick={handleNextPage}>
-                                Next
-                            </button>
-                        </div>
-                    );
-                }
-            case 8:
-                if (formInputs.institution && formInputs.capacity) {
-                return (
-                    navigate('/home')
-                    
-                )
-                }
             default:
                 return (
                     navigate('/home')
@@ -199,10 +160,10 @@ const RegistrationPage = () => {
             {renderPage()}
             {currentPage > 0 && (
                 <>
-                <FontAwesomeIcon icon={faArrowAltCircleLeft} onClick={handlePreviousPage} className='back-arrow'/>
+                    <FontAwesomeIcon icon={faArrowAltCircleLeft} onClick={handlePreviousPage} className='back-arrow' />
                 </>
             )}
-            
+
         </div>
     );
 };

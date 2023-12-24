@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import '../../LoginPage/LoginPage.css';
 import { useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
-import logo from '../../images/logo-virtual.png'
 
 
 const Password = () => {
@@ -28,7 +25,6 @@ const Password = () => {
                 return (
                     <div className="step-container" style={{
                         boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-                        , marginLeft: "4em"
                     }}>
                         <input
                             type="password"

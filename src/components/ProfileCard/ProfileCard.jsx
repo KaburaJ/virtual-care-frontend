@@ -16,7 +16,7 @@ import { ProfileSettings } from './ProfileSettings/ProfileSettings';
 import { Account } from './Account/Account';
 
 
-const ProfileCard = () => {
+const ProfileCard = ({userDetails}) => {
     const [IsListItemClicked, setIsListItemClicked] = useState('pregnancy')
     const [IsNavItemClicked, setIsNavItemClicked] = useState('overview')
 
@@ -111,7 +111,7 @@ const ProfileCard = () => {
                             {/* <h3 onClick={() => handleNavItemClicked('belly')} className={`nav-item ${IsNavItemClicked === 'belly' ? 'active' : ''}`}>My Belly</h3> */}
                         </header>
                         {IsNavItemClicked && IsNavItemClicked === 'overview' ? (
-                            <Overview />
+                            <Overview userDetails={userDetails}/>
                         ) : null}
                         {IsNavItemClicked && IsNavItemClicked === 'images' ? (
                             <Images />

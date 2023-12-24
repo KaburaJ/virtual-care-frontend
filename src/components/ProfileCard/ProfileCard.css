@@ -63,7 +63,6 @@
   height: 4em;
   justify-content: center;
 
-
 }
 
 .pregnancy-nav .nav-item {
@@ -293,3 +292,16 @@ label {
   font-weight: normal;
 }
 
+@media screen and (max-width: 900px){
+  .main-profile-section {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .due-date {
+    width: 94%;
+    padding: 2em;
+  }
+
+}

@@ -1,25 +1,61 @@
-import React from 'react'
-import '../ProfileCard.css'
-import { faAngleRight, faGear, faLock, faLockOpen, faPaintBrush, faPaintRoller, faPalette, faPallet, faPersonPregnant, faUser } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect, useState } from 'react';
+import '../ProfileCard.css';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Plotly from 'plotly.js/lib/core'; // Import the Plotly core module
-import createPlotlyComponent from 'react-plotly.js/factory'; // Import the React Plotly component
+import Plotly from 'plotly.js/lib/core'; 
+import createPlotlyComponent from 'react-plotly.js/factory'; 
+import axios from 'axios';
 
 const Plot = createPlotlyComponent(Plotly);
 
+export const Overview = ({ userDetails }) => {
+    console.log("USERDETAILS: ", userDetails);
+  const [pregnancyDetails, setPregnancyDetails] = useState("");
 
+  const handlePregnancyOverview = async (userDetails) => {
+    try {
+      const response = await axios.post('http://localhost:5003/user/details', {
+        UserID: userDetails.UserID
+      }, {
+        withCredentials: true
+      });
+  
+      console.log("data:", response);
+      setPregnancyDetails(response.data);
+    } catch (error) {
+      console.error('Error fetching user details:', error);
+    }
+  };
+  
 
-export const Overview = () => {
+  useEffect(() => {
+    handlePregnancyOverview(userDetails);
+  }, [userDetails]);
+
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(true);
+  };
+
+  const handleNoClick = () => {
+    setIsClicked(false);
+  };
 
     return (
         <div>
             <div className='due-date'>
                 <h3 className='weeks-left'>46</h3>
                 <div className='date-due'>
-                    <p style={{ display: 'flex', gap: "10px", fontWeight: "bold" }}>Due Date: <p style={{ marginTop: "-.1em", fontWeight: "bold", color: "#EC417A" }}>17th March, 2024</p></p>
+                    <p style={{ display: 'flex', gap: "10px", fontWeight: "bold" }}>Due Date: </p>
+                    {isClicked ? (
+                        <input style={{ marginTop: "-.1em", fontWeight: "bold", color: "#EC417A" }} onClick={() => handleNoClick()}></input>
+                    ):(
+                    <p style={{ marginTop: "-.1em", fontWeight: "bold", color: "#EC417A" }} onClick={() => handleClick()}>{pregnancyDetails.DueDate}</p>
+                    )}
                     <p>46 weeks left</p>
-                </div>
-                <FontAwesomeIcon className='forward-icon' icon={faAngleRight} />
+                </div> 
+            <FontAwesomeIcon className='forward-icon' icon={faAngleRight} />       
             </div>
             <div className='weight-info'>
                 <div className='weight-header'>
@@ -28,15 +64,15 @@ export const Overview = () => {
                 </div>
                 <div className='weight-main'>
                     <div className='weight-main-info'>
-                        <h3>84 Kgs</h3>
+                        <h3>{pregnancyDetails.StartWeight}</h3>
                         <p>Start Weight</p>
                     </div>
                     <div className='weight-main-info'>
-                        <h3>90 Kgs</h3>
+                        <h3>{pregnancyDetails.CurrentWeight}</h3>
                         <p>Current Weight</p>
                     </div>
                     <div className='weight-main-info'>
-                        <h3>6 Kgs</h3>
+                        <h3>{pregnancyDetails.GainedWeight}</h3>
                         <p>Gained Weight</p>
                     </div>
                 </div>
@@ -48,7 +84,7 @@ export const Overview = () => {
                     data={[
                         {
                             x: ['March, 2023', 'December, 2023'],
-                            y: [84, 90],
+                            y: [pregnancyDetails.StartWeight, pregnancyDetails.CurrentWeight],
                             type: 'scatter',
                             mode: 'lines+markers',
                             marker: { color: '#EC417A' },

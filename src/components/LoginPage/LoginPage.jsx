@@ -1,19 +1,40 @@
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 import './LoginPage.css';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import logo from '../images/logo-virtual.png'
+import axios from 'axios'
+import { useHistory } from 'react-router-dom';
 
 
-const LoginPage = () => {
+const LoginPage = ({onLogin}) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [formInputs, setFormInputs] = useState({
     username: '',
-    email: '',
+    password: '',
   });
+  const [userDetails, setUserDetails] = useState("")
   const navigate = useNavigate()
 
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post('http://localhost:5002/user/login', {
+        UserName: formInputs.username,
+        UserPassword: formInputs.password
+      });
+  
+      const userDetails = response.data.result;
+      setUserDetails(userDetails);
+  
+      onLogin(userDetails);
+  
+      navigate('/home');
+    } catch (error) {
+      console.error('Login failed:', error);
+    }
+  };
+  
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormInputs((prevInputs) => ({
@@ -23,7 +44,7 @@ const LoginPage = () => {
   };
 
   const handleNextPage = () => {
-    if (formInputs.username && formInputs.email) {
+    if (formInputs.username) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -65,16 +86,16 @@ const LoginPage = () => {
       case 1:
         return (
           <div className='step-container'>
-            <h2>Email</h2>
+            <h2>password</h2>
             <input
-              type="email"
-              name="email"
-              value={formInputs.email}
+              type="password"
+              name="password"
+              value={formInputs.password}
               onChange={handleInputChange}
-              placeholder="Email"
+              placeholder="password"
             />
-            <button className="next-button" onClick={handleNextPage}>
-              Next
+            <button className="next-button" onClick={handleLogin}>
+              Login
             </button>
           </div>
         );
