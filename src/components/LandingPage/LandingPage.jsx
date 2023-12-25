@@ -6,13 +6,17 @@ import testimony3 from '../images/pexels-gustavo-fring-3984373.jpg'
 import twitterpng from '../images/tw-removebg-preview.png'
 import instagrampng from '../images/ig-removebg-preview.png'
 import facebookpng from '../images/fb-removebg-preview.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from '../images/logo-virtual.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBook, faGear, faHospital, faHouse, faQuoteLeft, faQuoteRight, faUserFriends } from '@fortawesome/free-solid-svg-icons'
 
 
 export const LandingPage = () => {
+  const navigate = useNavigate()
+  const handleAbout =() =>{
+    navigate('/about')
+  }
 
   return (
     <div className='landing-page'>
@@ -20,7 +24,7 @@ export const LandingPage = () => {
         <img src={logo} alt='VirtualCare'></img>
         <div className='header-components'>
           <h3>News</h3>
-          <h3>About</h3>
+          <h3 onClick={handleAbout}>About</h3>
           <h3>Contact</h3>
           <h3 style={{ letterSpacing: "0" }}>Demo</h3>
         </div>
@@ -81,6 +85,7 @@ export const LandingPage = () => {
             <button className='read-more-button'>Read More</button>
           </div>
         </div>
+        
         <div className='testimonies'>
           <h1>Stories</h1>
           <div className='testimony-cards'>

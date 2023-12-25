@@ -10,6 +10,7 @@ import { BlogPage } from './components/BlogPages/BlogPage';
 import ProfileCard from './components/ProfileCard/ProfileCard';
 import LiveSessions from './components/LivePage/LiveSessions';
 import Home from './components/Home/Home'
+import { AboutPage } from './components/AboutPage/About';
 
 const App = () => {
   const [userDetails, setUserDetails] = useState("");
@@ -29,6 +30,7 @@ const App = () => {
         <Route path='/admin' element={<BlogPage />} />
         <Route path='/profile' element={<ProfileCard userDetails={userDetails} />} />
         <Route path='/go-live' element={<LivePage />} />
+        <Route path='/about' element={<AboutPage/>} />
       </Routes>
     </div>
   );
