@@ -7,7 +7,6 @@ export const BlogPage = () => {
     <div className='blog'>
 <Navbar/>
 
-
     </div>
   )
 }
