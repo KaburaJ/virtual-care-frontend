@@ -49,5 +49,4 @@ Follow these steps to set up and run the application locally:
 1. Clone the repository: `git clone https://github.com/KaburaJ/virtual-care-frontend.git`
 2. Navigate to the project directory: `cd virtual-care-frontend`
 3. Install dependencies: `npm install`
-4. Set up the backend server and database.
-5. Start the frontend and backend servers: `npm start`
+4. Start the frontend and backend servers: `npm start`
