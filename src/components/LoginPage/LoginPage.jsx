@@ -19,15 +19,15 @@ const LoginPage = ({onLogin}) => {
 
   const handleLogin = async () => {
     try {
-      // const response = await axios.post('http://localhost:5002/user/login', {
-      //   UserName: formInputs.username,
-      //   UserPassword: formInputs.password
-      // });
+      const response = await axios.post('http://localhost:5002/user/login', {
+        UserName: formInputs.username,
+        UserPassword: formInputs.password
+      });
   
-      // const userDetails = response.data.result;
-      // setUserDetails(userDetails);
+      const userDetails = response.data.result;
+      setUserDetails(userDetails);
   
-      // onLogin(userDetails);
+      onLogin(userDetails);
   
       navigate('/home');
     } catch (error) {
