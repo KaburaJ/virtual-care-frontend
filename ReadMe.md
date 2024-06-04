@@ -18,5 +18,22 @@ It is hosted hence use the instructions below to run it locally on your PC.
 ![image](https://github.com/KaburaJ/virtual-care-frontend/assets/99409674/6270d5b3-5293-4c28-8843-9350a6c2c05c)
 
 1. We now want to install the dependencies. Assuming that you have NodeJS installed, run the following commands in order.
-2. 1. `cd Client`
-   1. `c
+   i. `cd Client` Hit enter
+   i. `npm install` Hit enter
+   then,
+   i. `npm start` Hit enter
+   By now, an interface on `http://locolhost:3000` will be opened on your default browser. Just a few more steps and you can use the app.
+1. Create a second terminal the same way we created the above. Run the commands below.
+   i. `cd Server/Auth` Hit enter
+   , then,
+   i. `npm start`
+1. Create a third terminal the same way we created the above. Run the commands below.
+   i. `cd Server/Live` Hit enter
+   , then,
+   i. `npm start`
+1. Create a fourth terminal the same way we created the above. Run the commands below.
+   i. `cd Server/Logic` Hit enter
+   , then,
+   i. `npm start`
+
+That's it! You should now be able to access the app's capabilities. Enjoy!
