@@ -1,0 +1,550 @@
+@import url("../Common/Common.css");
+
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px)
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup-buttons button {
+  margin-right: 10px;
+}
+
+.doctor-form label,
+.expectant-form label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.doctor-form input,
+.expectant-form input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 4px;
+  text-align: left;
+}
+
+.doctor-form button,
+.expectant-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.doctor-form button:hover,
+.expectant-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Global Styles */
+.logged-in-homepage {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  background-color: var(--primary-color);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header Styles */
+.header {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home {
+  height: 30em;
+  width: 100%;
+  background-image: url("../images/front-view-pregnant-woman-exercising-mat-home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  box-shadow: 4px 4px 4px 4px solid white;
+  position: relative;
+}
+
+/* Main Content Styles */
+.main {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  position: absolute;
+  margin-top: -20em;
+  margin-left: 4.5em;
+  margin-right: 5em;
+}
+
+/* Dashboard Overview Styles */
+.dashboard {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 10em;
+  width: 70em;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.key-metrics {
+  display: flex;
+  gap: 1em;
+  height: 6em;
+  padding-top: 20px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 20px;
+}
+
+.metric {
+  flex: 1;
+  text-align: center;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  background-color: #ec417a;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  display: flex;
+  gap: 5.5em;
+}
+
+.metric h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Action Buttons Styles */
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.angle-icon {
+  cursor: pointer;
+}
+
+.angle-icon:hover:active {
+  transform: translateX(1.01);
+}
+
+.cta-button {
+  flex: 1;
+  background-color: var(--primary-text-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #009ac0;
+}
+
+/* Virtual Care Services Styles */
+.virtual-care-services h2 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  /* margin-top: 10px; */
+}
+
+/* Upcoming Appointments Styles */
+.upcoming-appointments h2 {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+.appointment-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.appointment-card {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Live Classes Section Styles */
+.live-classes h2 {
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+.live-class-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.live-class-card {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.live-class-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.angle-icon {
+  margin-left: 10px; /* Adjust the margin to your preference */
+  transition: transform 0.2s ease; /* Add the same transition for the angle icon */
+}
+
+.metric:hover .angle-icon {
+  transform: translateX(
+    5px
+  ); /* Adjust the amount of translation to match the .metric */
+}
+
+:root {
+  --color: #3c3163;
+  --transition-time: 0.5s;
+}
+
+a {
+  color: inherit;
+}
+
+.cards-wrapper,
+.cards-wrapper-1 {
+  display: flex;
+  gap: 100px;
+  margin-left: 1em;
+  margin-right: 1em;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  -webkit-scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.cards-wrapper::-webkit-scrollbar,
+.cards-wrapper-1::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-wrapper,
+.cards-wrapper-1 {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.cards-wrapper::-webkit-scrollbar-thumb,
+.cards-wrapper-1::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.cards-wrapper::-webkit-scrollbar-track,
+.cards-wrapper-1::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cards-wrapper::-webkit-scrollbar,
+.cards-wrapper-1::-webkit-scrollbar {
+  width: 0.1em; /* This width is for WebKit (Chrome, Safari) */
+}
+
+/* Optional: Style the scrollbar for Firefox */
+.cards-wrapper::-webkit-scrollbar,
+.cards-wrapper-1::-webkit-scrollbar {
+  width: thin; /* This is for Firefox */
+}
+
+.card {
+  --bg-filter-opacity: 0.5;
+  height: 10em;
+  width: 20em;
+  font-size: 1.5em;
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  transition: all, var(--transition-time);
+  position: relative;
+  overflow: hidden;
+  margin-left: -1em;
+  margin-right: -2em;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: rotate(0);
+}
+
+.card h1 {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+.card p {
+  font-size: 0.75em;
+  font-family: "Open Sans";
+  margin-top: 0.5em;
+  line-height: 2em;
+}
+
+.card .tags {
+  display: flex;
+}
+
+.card .tags .tag {
+  font-size: 0.75em;
+  background: transparent;
+  border-radius: 0.3rem;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  line-height: 1.5em;
+  transition: all, var(--transition-time);
+}
+
+.card:hover .tags .tag {
+  background: #ec417a;
+  color: white;
+}
+
+.card .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75em;
+  padding: 1em;
+  line-height: 1em;
+  opacity: 0.8;
+}
+
+.card:before,
+.card:after {
+  content: "";
+  transform: scale(0);
+  transform-origin: top left;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -5;
+  transition: all, var(--transition-time);
+  transition-timing-function: ease-in-out;
+}
+
+.card:before {
+  background: #ddd;
+  width: 250%;
+  height: 250%;
+}
+
+.card:after {
+  background: var(--primary-text-color);
+  color: white;
+  width: 200%;
+  height: 200%;
+}
+
+.card:hover {
+  color: white;
+}
+
+.card:hover:before,
+.card:hover:after {
+  transform: scale(1);
+}
+
+.card-grid-space .num {
+  font-size: 3em;
+  margin-bottom: 1.2rem;
+}
+
+.info {
+  font-size: 1.2em;
+  display: flex;
+  padding: 1em 3em;
+  height: 3em;
+}
+
+.info img {
+  height: 3em;
+  margin-right: 0.5em;
+}
+
+.info h1 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.card.one {
+  background-image: url("../images/pexels-daniel-xavier-1239291.jpg");
+  object-fit: cover;
+  object-position: center;
+}
+
+.card.two {
+  background-image: url("../images/pexels-gustavo-fring-3984358.jpg");
+  object-fit: cover;
+  object-position: center;
+}
+
+.card.three {
+  background-image: url("../images/pexels-thiago-borges-1765353.jpg");
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (max-width: 900px) {
+  .logged-in-homepage {
+    box-sizing: border-box;
+  }
+  .main {
+    height: 60em;
+  }
+  .dashboard {
+    width: 35.5em;
+    margin-left: -4em;
+    height: 22em;
+  }
+  .key-metrics {
+    display: block;
+    max-width: 100%;
+  }
+
+  .metric {
+    margin-bottom: 10px;
+  }
+
+  .blog-cards-1 .blog-1-header {
+    margin-top: 8em;
+  }
+  .cards-wrapper-1 {
+    max-width: 100%;
+  }
+  footer {
+    max-width: 100%;
+  }
+  .footer-content {
+    display: block;
+  }
+
+  .footer-definition {
+    flex-direction: row;
+    padding-left: 1em;
+    max-width: 35em;
+  }
+
+  .footer-definition p {
+    margin-top: 2em;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 165px;
+    padding-top: 1em;
+    margin-left: 3em;
+    padding-bottom: 2em;
+  }
+
+  .social-links a {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: var(--footer-color);
+    gap: 15px;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .social-links a p {
+    margin-left: 2.5em;
+  }
+
+  .social-links img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    width: 18em;
+    margin-left: 1em;
+    text-align: justify;
+  }
+
+  .contact-info .copy-tag {
+    padding-left: 20em;
+    position: absolute;
+  }
+}

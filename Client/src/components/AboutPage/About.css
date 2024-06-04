@@ -1,0 +1,48 @@
+.about-container {
+    box-sizing: border-box;
+}
+
+.about-container h1{
+    padding: 20px;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: row;
+    gap: 16em;
+}
+
+.header-section img {
+    margin-top: -1em;
+    cursor: pointer;
+}
+.about-header {
+    margin-top: 2.5em;
+}
+
+.founders-header {
+    margin-top: 2.5em;
+}
+.App-info {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.App-info p{
+    margin-top: -1em;
+    text-align: justify;
+}
+
+.founders-pics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    margin-bottom: 8em;
+}
+
+.founders-pics img {
+    width: 19.5em;
+    height: 19.5em;
+    margin-bottom: 2em;
+    margin-right: 1em;
+}

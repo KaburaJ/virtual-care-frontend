@@ -1,0 +1,94 @@
+@import url("../Common/Common.css");
+
+.navbar {
+  box-sizing: border-box;
+  background-color: var(--secondary-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 6em;
+  color: var(--primary-text-color);
+}
+
+.navbar .list {
+  list-style-type: none;
+  display: flex;
+  gap: 55px;
+  margin-left: 1em;
+  font-size: large;
+  
+}
+
+.list .icon:hover {
+  background-color: var(--primary-color);
+}
+
+.link {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  letter-spacing: 0.3em;
+}
+
+.link-ul {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+.link-ul.active {
+  background-color: var(--primary-text-color);
+  padding: 0.8em;
+  color: white;
+  border-radius: 0.8em;
+  margin-top: -1em;
+}
+
+input {
+  width: 20em;
+  text-align: center;
+  height: 4em;
+  border-radius: 4em;
+  background-color: var(--secondary-color);
+  border: none;
+  outline: none;
+  margin-right: 1.5em;
+}
+
+.side-containers {
+  display: flex;
+  justify-content: space-between;
+  /* position: absolute; */
+}
+
+.side-bar {
+  background-color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .navbar{
+    max-width: 100%;
+  }
+  .link img {
+    width: 5em;
+    height: 5em;
+    margin-left: -3px;
+  }
+
+  .navbar .list {
+    gap: 2em;
+    margin-left: 1em;
+    margin-right: 11em;
+  }
+
+  .list .icon {
+    font-size: x-large;
+    padding: 0;
+  }
+  .header input {
+    display: none;
+  }
+}

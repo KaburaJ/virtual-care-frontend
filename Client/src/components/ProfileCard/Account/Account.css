@@ -1,0 +1,174 @@
+.account {
+    margin-top: 1em;
+}
+
+.account h1 {
+    font-weight: normal;
+}
+
+.account-body {
+    align-items: center;
+    margin-top: 1em;
+}
+
+.account-form {
+    background-color: white;
+    width: 47em;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 50px;
+
+}
+
+
+.username {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-left: 1em;
+    padding-top: 1em;
+    margin-bottom: 50px;
+    background-color: var(--secondary-color);
+}
+
+.username .username-field .input-field {
+    width: 25.5em;
+    background-color: var(--primary-color);
+    border-radius: .5em;
+}
+
+.address-info .address-field .input-field{
+    width: 54em;
+    background-color: var(--primary-color);
+    margin-left: 1em;
+    border-radius: .5em;
+
+}
+
+.address-info .user-contact-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-info-field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+
+}
+
+.address-info .user-contact-info .contact-info-field .input-field {
+    width: 16.15em;
+    background-color: var(--primary-color);
+    border-radius: .5em;
+
+}
+
+.account-body {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.profile-pic img {
+    object-fit: cover;
+    width: 100%;
+    height: 20em;
+    object-position: center;
+}
+
+.account-form {
+    background-color: white;
+    padding: 8px;
+}
+
+.account-form .input-field {
+    width: 36em;
+}
+
+.username {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding-left: 1em;
+    padding-top: 1em;
+    margin-bottom: 50px;
+    background-color: var(--secondary-color);
+}
+
+.username-field .input-field {
+    width: 19.5em;
+    background-color: var(--primary-color);
+    border-radius: .5em;
+}
+
+.address-field .input-field{
+    width: 41.5em;
+    background-color: var(--primary-color);
+    margin-left: 1em;
+    border-radius: .5em;
+
+}
+
+.user-contact-info {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.contact-info-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-field .input-field {
+    width: 12em;
+    background-color: var(--primary-color);
+    border-radius: .5em;
+    margin-left: 1em;
+
+}
+
+.text-input-field {
+    width: 44.7em;
+    height: 8em;
+    margin-top: 1em;
+    margin-bottom: 40px;
+    margin-left: 1em;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    
+}
+
+
+@media screen and (max-width: 900px) {
+    .account-form {
+        width: 38em;
+        margin-left: 1em;
+    }
+    .username .username-field .input-field {
+        width: 20em;
+    }
+
+    .address-field .input-field{
+        max-width: 42.5em;
+    }
+
+    .contact-info-field .input-field {
+        max-width: 12.2em;
+    }
+    .text-input-field {
+        width: 35em;
+    }
+
+    .account {
+        margin-top: -6em;
+    }
+
+    .account h1 {
+        margin-left: .7em;
+    }
+}
+

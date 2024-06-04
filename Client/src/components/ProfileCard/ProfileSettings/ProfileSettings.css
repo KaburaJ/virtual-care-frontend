@@ -1,0 +1,95 @@
+.profile-body {
+  display: flex;
+  gap: 50px;
+  margin-top: -1.5em;
+}
+
+.settings-form div img {
+  width: 45em;
+  height: 20em;
+  margin-top: -1.3em;
+  object-fit: cover;
+  object-position: center;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  background-color: white;
+  width: 45em;
+  margin-top: 50px;
+  padding-top: 20px;
+  margin-left: 3em;
+  margin-bottom: 70px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+.settings-form input {
+  width: 90%;
+  background-color: transparent;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0%;
+  margin-top: -3em;
+  vertical-align: text-bottom;
+  text-align:start;
+  
+}
+
+.profile-buttons button {
+  height: 4em;
+  width: 8em;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  background-color: var(--primary-text-color);
+  color: white;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  border-radius: 1em;
+}
+
+.profile-buttons button:hover {
+  background-color: #ec417a;
+}
+
+.file-upload-label {
+    margin-left: 3em;
+    margin-top: -3em;
+}
+
+.edit-icon {
+    color: var(--primary-text-color);
+    cursor: pointer;
+}
+
+.edit-icon:active {
+    color: #ec417a;
+}
+
+@media screen and (max-width: 900px) {
+  .profile-body,
+  .settings-form     {
+    box-sizing: border-box;
+    width: 39em;
+    margin-left: 1em;
+    /* margin-top: -4em; */
+  }
+
+  .settings-form div img{
+    width: 38.99em;
+    margin-bottom: 1em;
+  }
+
+  .bio-info .text-input-field{
+    max-width: 35em;
+    margin-left: -.9em;
+  }
+
+  .overall-settings-container h1 {
+    margin-top: -5em;
+  }
+
+}

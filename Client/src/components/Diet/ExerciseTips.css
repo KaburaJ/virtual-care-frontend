@@ -1,0 +1,49 @@
+.exercise-tips {
+    /* margin-left: 20px; */
+    /* margin-right: 20px; */
+    margin-bottom: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+}
+
+.exercise-tips h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.exercise-tips h3 {
+    color: #666;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.exercise-tips h4 {
+    color: #888;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.exercise-tips p, .exercise-tips li {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.exercise-tips ul, .exercise-tips ol {
+    margin-left: 20px;
+}
+
+.exercise-tips blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 10px;
+    color: #777;
+    font-style: italic;
+    margin: 15px 0;
+}

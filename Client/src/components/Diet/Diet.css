@@ -1,0 +1,686 @@
+/* .container {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.diet_img {
+    height: 25em;
+    width: 100%;
+    background-image: url("../images/diet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    box-shadow: 4px 4px 4px 4px solid white;
+    position: relative;
+}
+
+h1 {
+    color: #333;
+}
+
+.button-container {
+    margin: 20px 0;
+}
+
+.button-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+.button-container button.active {
+    background-color: #0056b3;
+}
+
+.trimester-content {
+    text-align: left;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+/* User Work */
+#page {
+  /* box-sizing: border-box; */
+  background-color: transparent;
+  padding: 15px;
+}
+/* #image-logo {
+  width: 65px;
+} */
+#image-mealPlanner {
+  /* width: 400px; */
+}
+#user-work {
+  box-sizing: border-box;
+  width: 100%;
+  /* margin: 15px 0px 0px 0px; */
+  padding: 30px 100px 30px 100px;
+  height: 1275px;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr 1.5fr 1fr;
+  grid-gap: 50px;
+}
+#user-form {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+}
+
+#inputType {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 100px;
+  align-items: center;
+}
+#selectType {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 100px;
+  align-items: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#height {
+  background-color: rgb(228, 228, 228);
+  border-radius: 15px;
+  width: 200px;
+}
+#heightRed {
+  background-color: rgb(228, 228, 228);
+  border-radius: 15px;
+  width: 200px;
+  box-shadow: 0px 0px 5px 1px red;
+}
+#heightRed::placeholder {
+  color: red;
+}
+
+#weight {
+  background-color: rgb(228, 228, 228);
+  border-radius: 15px;
+  width: 200px;
+}
+#weightRed {
+  background-color: rgb(228, 228, 228);
+  border-radius: 15px;
+  width: 200px;
+  box-shadow: 0px 0px 5px 1px red;
+}
+#weightRed::placeholder {
+  color: red;
+}
+
+#age {
+  background-color: rgb(228, 228, 228);
+  border-radius: 15px;
+  width: 200px;
+}
+#ageRed {
+  background-color: rgb(228, 228, 228);
+  border-radius: 15px;
+  width: 200px;
+  box-shadow: 0px 0px 5px 1px red;
+}
+#ageRed::placeholder {
+  color: red;
+}
+
+#gender {
+  background-color: rgb(228, 228, 228);
+  border-radius: 15px;
+  width: 200px;
+}
+#genderRed {
+  background-color: rgb(228, 228, 228);
+  border-radius: 15px;
+  width: 200px;
+  color: red;
+  box-shadow: 0px 0px 5px 1px red;
+}
+
+#activity-level {
+  background-color: rgb(228, 228, 228);
+  border-radius: 15px;
+  width: 200px;
+  text-overflow: ellipsis;
+}
+#activity-levelRed {
+  background-color: rgb(228, 228, 228);
+  border-radius: 15px;
+  width: 200px;
+  text-overflow: ellipsis;
+  color: red;
+  box-shadow: 0px 0px 5px 1px red;
+}
+
+#generate-meals-btn {
+  border-radius: 15px;
+  width: 200px;
+  height: 40px;
+  color: white;
+  background-color: #006983;
+  font-weight: 500;
+}
+#generate-meals-btn:active {
+  background-color: rgb(180, 36, 36);
+  font-size: 15px;
+}
+
+/* Meals */
+#meals {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  text-align: justify;
+  /* background-color: rgb(49, 228, 228); */
+}
+
+.meal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+}
+.mealType {
+  color: #006983;
+  font-size: large;
+  font-weight: 500;
+}
+.mealDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 345px;
+  height: 434px;
+  padding-bottom: 20px;
+  background-color: #006983;
+  border-radius: 20px;
+  border: 3px solid #006983;
+}
+.mealImage {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+.mealTitle {
+  color: rgb(255, 255, 255);
+  font-size: medium;
+  font-weight: 500;
+}
+.mealCalories {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+.mealButton {
+  height: 30px;
+  width: 150px;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-size: medium;
+  font-weight: 500;
+}
+.mealButton:active {
+  background-color: rgb(236, 47, 47);
+  font-size: 15px;
+}
+
+/* Recipe */
+.recipe {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(228, 228, 228);
+  border-radius: 10px;
+  padding: 20px;
+  overflow: auto;
+  box-shadow: 2px 2px 5px black;
+  height: 318px;
+}
+.display {
+  display: none;
+}
+
+#recipe::-webkit-scrollbar {
+  display: none;
+}
+table {
+  width: 80%;
+  /* border: 2px solid; */
+  line-height: 40px;
+  letter-spacing: 1px;
+}
+thead {
+  font-size: larger;
+  color: #006983;
+}
+tbody {
+  font-size: large;
+  font-weight: 500;
+}
+td,
+th {
+  width: 80%;
+}
+.ingredients {
+  text-transform: capitalize;
+}
+.equipment {
+  text-transform: lowercase;
+}
+
+/* media screen */
+@media (max-width: 800px) {
+  #page {
+    width: auto;
+    height: auto;
+  }
+  #user-work {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #user-form,
+  #user-form section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 5px;
+  }
+  #meals {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 620px) {
+  /* #logo {
+    justify-content: center;
+    padding: 0px;
+  } */
+  #image-logo {
+    display: none;
+  }
+  table {
+    width: 100%;
+    letter-spacing: 0px;
+  }
+}
+@media (max-width: 520px) {
+  #recipe {
+    width: 345px;
+  }
+  table {
+    line-height: 30px;
+  }
+  thead {
+    font-size: medium;
+    color: #006983;
+  }
+  tbody {
+    font-size: medium;
+  }
+}
+@media (max-width: 420px) {
+  #image-mealPlanner {
+    display: none;
+  }
+  #image-logo {
+    display: block;
+  }
+}
+@media (max-width: 395px) {
+  #page {
+    height: 395px;
+    width: 395px;
+  }
+}
+.recipe-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.recipe-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80%; /* Set a maximum height for the pop-up */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+}
+
+.ingredients-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.ingredients-table th, .ingredients-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.ingredients-table th {
+    background-color: #f2f2f2;
+}
+
+/* LivePage.css or your custom CSS file */
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    width: 70%;
+    margin-left: 17%;
+    margin-top:5em;
+    overflow: hidden;
+    overflow-y: hidden;
+    color: white;
+    box-shadow: 2px 2px 2px 2px solid #ccc;
+    object-fit: contain;
+  }
+  
+  .embedded-iframe {
+    width: 100%;
+    height: 200vh;
+    border: none; 
+    color: white;
+    overflow: hidden;
+  }
+ .embedded-iframe .grd-header {
+    display: none
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+:root {
+  --bg-color: #E6F0F2;
+  --start-color: #0ac;
+  --pause-color: #8ad4a4;
+  --reset-color: #d26258;
+  --loop-color: #efb834;
+  --timer-color: #f4f4f4;
+  --screen-color: #c7dfe6;
+  --shadow-screen-color: #b9d7e0;
+}
+
+#wrap {
+  background-color: var(--bg-color);
+  margin-top: -80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrap {
+  position: relative;
+  width: 646px;
+  height: 300px;
+  background: none;
+  margin: 0 auto 0  auto;
+  padding: 0;
+  top: calc((100vh - 408px)/2);
+  transform-origin: 303px 204px;
+  transform: scale(80%);
+}
+
+#pause,
+#reset,
+#start {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  border: 0px;
+  transition: all 0.2s ease;
+}
+
+#pause img,
+#reset img,
+#start img {
+  position: relative;
+  top: -10px;
+}
+
+#start {
+  background-color: var(--start-color);
+  width: 148px;
+  height: 86px;
+  left: 0;
+  border-radius : 15px 15px 0px 0px;
+  -moz-border-radius : 15px 15px 0px 0px;
+  -webkit-border-radius : 15px 15px 0px 0px;
+}
+
+#pause {
+  background-color: var(--pause-color);
+  width: 148px;
+  height: 86px;
+  left: 148px;
+  border-radius : 15px 15px 0px 0px;
+  -moz-border-radius : 15px 15px 0px 0px;
+  -webkit-border-radius : 15px 15px 0px 0px;
+}
+
+#reset {
+  background-color: var(--reset-color);
+  width: 148px;
+  height: 86px;
+  left: 296px;
+  border-radius : 15px 15px 0px 0px;
+  -moz-border-radius : 15px 15px 0px 0px;
+  -webkit-border-radius : 15px 15px 0px 0px;
+  
+}
+
+@keyframes reset-anim {
+  50% {
+    top: 15px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+#loop {
+  position: absolute;
+  cursor: pointer;
+  top: 6px;
+  left: 465px;
+  transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+  transform-origin: 85px 100px;
+}
+
+.looped {
+  
+  transform: rotate(90deg);
+}
+
+#loop-div {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #444;
+  display: flex;
+  margin-left: 20px;
+}
+
+#timer-body {
+  background-color: var(--timer-color);
+  width: 646px;
+  height: 354px;
+  position: absolute;
+  left: 0;
+  top: 54px;
+  border-radius : 31px 176px 176px 31px;
+  -moz-border-radius : 31px 176px 176px 31px;
+  -webkit-border-radius : 31px 176px 176px 31px;
+}
+
+#timer-hole-light {
+  position: absolute;
+  background-color: white;
+  width: 309px;
+  height: 180px;
+  top: 145px;
+  left: 26px;
+}
+
+#screen {
+  box-sizing: border-box;
+  position: absolute;
+  width: 305px;
+  height: 172px;
+  top: 145px;
+  left: 30px;
+  padding: 20px;
+  background-color: var(--shadow-screen-color);
+}
+
+#screen-light {
+  position: absolute;
+  background-color: var(--screen-color);
+  width: 297px;
+  height: 162px;
+  top: 10px;
+  left: 0px;
+}
+
+
+
+#circle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 120px;
+  left: 370px;
+  color: white;
+  border-radius: 50%;
+  
+  width: 220px;
+  height: 220px;
+  background-color: var(--start-color);
+  animation: pulse 0.5s cubic-bezier(1,0,0,1) alternate  infinite;
+  animation-play-state: paused;
+  animation-fill-mode: backwards;
+}
+
+
+
+@keyframes pulse{
+  100% {
+    opacity: 50%;
+  }
+}
+
+#name {
+  position: relative;
+  left: 0;
+  margin: auto 1em auto 0;
+  font-size: 2.4rem;
+  text-align: left;
+  color: #383838;
+}
+
+#time {
+  font-size: 8rem;
+  position: relative;
+  
+  display: block;
+  text-align: center;
+  
+}
+
+#next {
+  position: relative;
+  font-size: 1.4rem;
+  left: 4px;
+  text-align: left;
+  color: #383838;
+}
+
+@media only screen and (orientation: portrait){
+  #wrap {
+    transform: rotate(-90deg) scale(60%);
+  }
+}
